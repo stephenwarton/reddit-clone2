@@ -22,3 +22,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+img {
+  width: 20em;
+}
+
+.invalid {
+  border: 1px solid red;
+}
