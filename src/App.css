@@ -30,3 +30,7 @@ img {
 .invalid {
   border: 1px solid red;
 }
+
+.author {
+  margin-bottom: 1em;
+}

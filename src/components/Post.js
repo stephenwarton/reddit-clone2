@@ -15,8 +15,6 @@ class Post extends Component {
         {sortPosts(filteredPosts, this.props.sortOption).map((post,i) => {
         return (<div key={i} className="row">
           <div className="col-md-12">
-
-
               <div className="well">
               <div className="media-left">
                 <img className="media-object" alt="" src={post.image} />
@@ -26,9 +24,9 @@ class Post extends Component {
                   {post.title+" "}
                   <Votes post={post} updateVotes={this.props.updateVotes} />
                 </h4>
-                <div className="text-right">
-                  {post.author}
-                </div>
+                <p className="author">
+                  {`by ${post.author}`}
+                </p>
                 <p>
                   {post.description}
                 </p>

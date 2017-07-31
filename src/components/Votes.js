@@ -7,6 +7,11 @@ class Votes extends Component{
 
         this.upVote = this.upVote.bind(this);
         this.downVote = this.downVote.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+      }
+
+      clickHandler(e){
+        console.log(this.props.post);
       }
 
       upVote(e){
@@ -27,6 +32,7 @@ class Votes extends Component{
           <a onMouseDown={this.upVote}><i className="glyphicon glyphicon-arrow-up"></i></a>
           <a onMouseDown={this.downVote}><i className="glyphicon glyphicon-arrow-down"></i></a>
           {this.props.post.votes}
+          <span className="pull-right"><a onClick={this.clickHandler} className="btn btn-link text-right">Edit Post</a></span>
         </span>
       )
     }
